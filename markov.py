@@ -5,7 +5,7 @@ import random
 
 def create_markov(words):
 	markov_struct = dict()
-	for i in xrange(2,len(words)):	#differentiate punctuation
+	for i in xrange(2,len(words)):	
 		markov_struct.setdefault((words[i-2], words[i-1]), [])\
 					 .append(words[i])
 	return markov_struct
